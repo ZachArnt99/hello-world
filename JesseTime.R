@@ -19,10 +19,10 @@ g <- ggplot(JesseTimeLong, aes(x=Week,y=value))
 g+geom_bar(stat='identity',fill = "green")+xlab("Fall 2023 Week")+
   ylab("Time Spent (hrs)")+
   facet_wrap(~measure,ncol=4)+
-  scale_y_continuous(breaks = c(0,2,4,6,8,10,12,14,15,16), labels=c("0","2","4","6","8","10","12","14","VIOLIN\nTARGET","16"))+
+  scale_y_continuous(breaks = c(0,5,10,15), labels=c("0","5","10","Violin\nTarget"))+
   ggtitle("How Jesse Spends Time")+
   #theme(plot.title = element_text(hjust = 0.5))+
   geom_hline(yintercept=15, linetype="dashed", color = "red", size=1)+
   theme(plot.margin = unit(c(1,2,1,1), "lines"))+
-  theme(axis.text=element_text(size=6))
+  theme(axis.text=element_text(size=9))
 dev.off()
